@@ -1,0 +1,138 @@
+<html>
+<head>
+    <!-- Add jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'arial', sans-serif;
+            background-image: url('faqimage.jpg'); /* Adjust the path to your image */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .faq-heading-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .faq-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .faq-list li {
+            border: 1px solid rgb(205, 205, 205);
+            padding: 27px 30px;
+            margin: 0px auto 30px;
+            text-align: left;
+            width: 550px;
+            position: relative;
+        }
+
+        .faq-list .faq-heading::before {
+            content: '+';
+            font-size: 40px;
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #c2c2c2;
+        }
+
+        .faq-list .the-active .faq-heading::before {
+            content: '-';
+        }
+
+        .faq-heading {
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .faq-heading:hover {
+            color: var(--theme-color);
+        }
+
+        .faq-text {
+            display: none;
+        }
+
+        .container {
+            width: 1200px;
+            margin: auto;
+        }
+
+        .art-box svg {
+            width: 100%;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .row .col {
+            flex-basis: 50%;
+        }
+
+        .read {
+            color: rgb(100, 100, 100);
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="faq-heading-container">
+            <h1>Frequently Asked Questions</h1>
+        </div>
+
+        <div class="">
+            <ul class="faq-list">
+                <!-- FAQ items go here -->
+                <li>
+                    <h4 class="faq-heading">What is this website about?</h4>
+                    <p class="read faq-text">This website is dedicated to providing information about our services/products.</p>
+                </li>
+                <li>
+                    <h4 class="faq-heading">How can I contact support?</h4>
+                    <p class="read faq-text">For any inquiries or issues, you can contact us through our Contact Us page or email us at support@example.com.</p>
+                </li>
+                <li>
+                    <h4 class="faq-heading">Is my personal information secure on this website?</h4>
+                    <p class="read faq-text">Yes, we take the security and privacy of your information very seriously. You can learn more about our security measures in our Privacy Policy.</p>
+                </li>
+                <li>
+                    <h4 class="faq-heading">What are your business hours?</h4>
+                    <p class="read faq-text">Our business hours are as follows:<br>
+                    Monday to Friday: 9:00 AM - 6:00 PM<br>
+                    Saturday: 10:00 AM - 4:00 PM<br>
+                    We are closed on Sundays and public holidays.</p>
+                </li>
+                <li>
+                    <h4 class="faq-heading">How do I create an account?</h4>
+                    <p class="read faq-text">To create an account, click on the "Sign Up" or "Create Account" link/button on the top-right corner of the website. Fill in the required information, such as your name, email address, and password. Follow the steps to complete the account creation process.</p>
+                </li>
+                <li>
+                    <h4 class="faq-heading">How do I reset my password?</h4>
+                    <p class="read faq-text">If you need to reset your password, click on the "Forgot Password" link on the login page. Enter the email associated with your account, and we'll send you instructions on how to reset your password. Follow the provided steps to set a new password for your account.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            $('.faq-heading').click(function () {
+                $(this).parent('li').toggleClass('the-active').find('.faq-text').slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>

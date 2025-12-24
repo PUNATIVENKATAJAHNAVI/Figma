@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background: url('contactimage.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .form-container {
+            width: 340px;
+            height: 440px;
+            background: #e6e6e6;
+            border-radius: 8px;
+            box-shadow: 0 0 40px -10px #000;
+            margin: calc(50vh - 220px) auto;
+            padding: 20px 30px;
+            max-width: calc(100vw - 40px);
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .form-heading {
+            margin: 10px 0;
+            padding-bottom: 10px;
+            width: 180px;
+            color: #78788c;
+            border-bottom: 3px solid #78788c;
+        }
+
+        .input-group {
+            margin-bottom: 28px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            background: none;
+            outline: none;
+            resize: none;
+            border: 0;
+            font-family: 'Montserrat', sans-serif;
+            transition: all .3s;
+            border-bottom: 2px solid #bebed2;
+        }
+
+        .input-group input:focus {
+            border-bottom: 2px solid #78788c;
+        }
+
+        .input-group input::placeholder {
+            color: #bebed2;
+        }
+
+        .button-container {
+            text-align: right;
+        }
+
+        button {
+            padding: 8px 12px;
+            font-family: 'Montserrat', sans-serif;
+            border: 2px solid #78788c;
+            background: 0;
+            color: #5a5a6e;
+            cursor: pointer;
+            transition: all .3s;
+        }
+
+        button:hover {
+            background: #78788c;
+            color: #fff;
+        }
+
+        .contact-info {
+            position: absolute;
+            bottom: -15px;
+            right: -20px;
+            background: #50505a;
+            color: #fff;
+            width: 320px;
+            padding: 16px 4px 16px 0;
+            border-radius: 6px;
+            font-size: 13px;
+            box-shadow: 10px 10px 40px -14px #000;
+        }
+
+        .contact-info span {
+            margin: 0 5px 0 15px;
+        }
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  align-self: flex-end;
+  margin: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+    </style>
+</head>
+
+<body>
+<nav>
+    <ul>
+      <li><a href="portfolio.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact us.html">Contact</a></li>
+    </ul>
+</nav>
+    <div class="form-container">
+        <h2 class="form-heading">CONTACT US</h2>
+        <div class="input-group">
+            <p type="Name:"><input placeholder="Write your name here.." /></p>
+        </div>
+        <div class="input-group">
+            <p type="Email:"><input placeholder="Let us know how to contact you back.." /></p>
+        </div>
+        <div class="input-group">
+            <p type="Message:"><input placeholder="What would you like to tell us.." /></p>
+        </div>
+        <div class="button-container">
+            <button>Send Message</button>
+        </div>
+        <div class="contact-info">
+            <span class="fa fa-phone"></span>001 1023 567
+            <span class="fa fa-envelope-o"></span> contact@company.com
+        </div>
+    </div>
+</body>
+
+</html>
